@@ -23,19 +23,22 @@ CREATE DATABASE OnlineBookstore;
 \c OnlineBookstore;
 2. Create Tables
 The script defines three main tables:
-- Books
-- Customers
-- Orders (linked to both Books and Customers via foreign keys)
+    - Books
+    - Customers
+    - Orders (linked to both Books and Customers via foreign keys)
 Each table includes proper data types, constraints, and primary keys.
 
 ## 📤 Data Import
 After table creation, load data from the provided CSV files:
+
 COPY Books(Book_ID, Title, Author, Genre, Published_Year, Price, Stock)
 FROM 'D:\\Course Updates\\30 Day Series\\SQL\\CSV\\Books.csv'
 CSV HEADER;
+
 COPY Customers(Customer_ID, Name, Email, Phone, City, Country)
 FROM 'D:\\Course Updates\\30 Day Series\\SQL\\CSV\\Customers.csv'
 CSV HEADER;
+
 COPY Orders(Order_ID, Customer_ID, Book_ID, Order_Date, Quantity, Total_Amount)
 FROM 'D:\\Course Updates\\30 Day Series\\SQL\\CSV\\Orders.csv'
 CSV HEADER;
