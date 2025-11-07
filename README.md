@@ -1,8 +1,8 @@
-###📚 Online Bookstore Database
+## 📚 Online Bookstore Database
 This project simulates an Online Bookstore Management System using SQL and CSV datasets.
 It demonstrates database creation, data import, and data analysis queries using PostgreSQL.
 
-📁 Project Structure
+# 📁 Project Structure
 Online_Bookstore/
 │
 ├── Books.csv
@@ -10,17 +10,17 @@ Online_Bookstore/
 ├── Orders.csv
 └── Online_Bookstore.sql
 
-🧩 Files Description
+# 🧩 Files Description
 File	Description
 Books.csv	Contains book details such as title, author, genre, price, stock, and published year.
 Customers.csv	Contains customer information including name, email, phone, city, and country.
 Orders.csv	Contains order transaction details linking customers and books, along with order date, quantity, and total amount.
 Online_Bookstore.sql	SQL script that creates the database, imports data from CSV files, and runs multiple analytical queries.
-⚙️ Database Setup
+
+# ⚙️ Database Setup
 1. Create and Connect to Database
 CREATE DATABASE OnlineBookstore;
 \c OnlineBookstore;
-
 2. Create Tables
 The script defines three main tables:
 - Books
@@ -28,7 +28,7 @@ The script defines three main tables:
 - Orders (linked to both Books and Customers via foreign keys)
 Each table includes proper data types, constraints, and primary keys.
 
-📤 Data Import
+# 📤 Data Import
 After table creation, load data from the provided CSV files:
 COPY Books(Book_ID, Title, Author, Genre, Published_Year, Price, Stock)
 FROM 'D:\\Course Updates\\30 Day Series\\SQL\\CSV\\Books.csv'
@@ -45,10 +45,11 @@ Update the file paths according to your local directory before running these com
 Example (Linux/macOS):
 /home/user/Online_Bookstore/Books.csv
 
-🔍 Query Overview
+# 🔍 Query Overview
 The script includes 15+ queries, divided into two sections:
+
 📘 Basic Queries
-#	Query	Purpose
+Query	Purpose
 1	Books by genre = 'Fiction'	Filter books by genre
 2	Books published after 1950	Apply date-based condition
 3	Customers from Canada	Geographic filter
@@ -62,7 +63,7 @@ The script includes 15+ queries, divided into two sections:
 11	Total revenue	Aggregate total sales
 
 🚀 Advanced Analytical Queries
-#	Query	Insight
+Query	Insight
 1	Total books sold per genre	JOIN + GROUP BY
 2	Average price of Fantasy books	AVG()
 3	Customers with ≥2 orders	HAVING COUNT()
@@ -73,19 +74,19 @@ The script includes 15+ queries, divided into two sections:
 8	Customer with highest spending	Top spender analysis
 9	Remaining stock after sales	Stock vs sold quantity
 
-🧠 Concepts Demonstrated
+# 🧠 Concepts Demonstrated
 Database normalization & relationships (1-to-many)
 Use of JOIN, GROUP BY, HAVING, and aggregate functions
 Query optimization via filtering and ordering
 Handling CSV imports using PostgreSQL COPY command
 
-🧪 Recommended Tools
+# 🧪 Recommended Tools
 PostgreSQL ≥ 13
 pgAdmin (optional GUI)
 Text editor: VS Code / Sublime / Notepad++
 CSV viewer: Excel / Google Sheets
 
-✅ Expected Output Examples
+# ✅ Expected Output Examples
 Example: Retrieve all Fiction books
 SELECT * FROM Books WHERE Genre = 'Fiction';
 
@@ -102,7 +103,7 @@ LEFT JOIN Orders o ON b.Book_ID = o.Book_ID
 GROUP BY b.Book_ID
 ORDER BY b.Book_ID;
 
-📄 Author & Usage
+# 📄 Author & Usage
 Author: Katerina Petrova
 Purpose: Academic/learning project demonstrating relational database design, SQL querying, and analytics.
 License: Free for educational use.
