@@ -104,6 +104,6 @@ GROUP BY b.Book_ID
 ORDER BY b.Book_ID;
 
 ## 📄 Author & Usage
-Author: Katerina Petrova
+Author: Riya Mhatre
 Purpose: Academic/learning project demonstrating relational database design, SQL querying, and analytics.
 License: Free for educational use.
